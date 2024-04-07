@@ -25,7 +25,6 @@ export class WishlistComponent implements OnInit{
           })
         }
     })
-    
   }
   delete(wishlistid:number){
     console.log(wishlistid)
