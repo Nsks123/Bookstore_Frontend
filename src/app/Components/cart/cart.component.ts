@@ -33,7 +33,6 @@ export class CartComponent implements OnInit{
       addressType:['',[Validators.required]]
     })
   }
-
   getcart(){
     this.cartService.getCart().subscribe((response:any)=>{
       console.log(response);
@@ -46,16 +45,11 @@ export class CartComponent implements OnInit{
           
         })
       }
-      //this.itemList.reverse();
-
     })
   }
    placed(){
     this.clickOn=true;
    }
-
-
-
   AddressSubmit(){
     this.clickorder=true
     let reqData={
