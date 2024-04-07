@@ -18,8 +18,7 @@ export class ToolbarComponent implements OnInit{
       this.decodevalues=jwtDecode(this.token);
       this.display=false;
       console.log(this.decodevalues);
-    }
-    
+    } 
   }
   cart(){
     this.router.navigate(["/cart"])
@@ -34,11 +33,8 @@ export class ToolbarComponent implements OnInit{
   wishlist(){
     this.router.navigate(["/wishlist"])
   }
-
   wislist1(){
     this.router.navigate(["/wishlist"])
-  }
-
-  
+  } 
 }
 

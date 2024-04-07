@@ -94,29 +94,26 @@ input:focus{
 }
 .GreetMessage{
     padding-right: 10px;
-   }
+ }
    
-   .ProfileMenu{
-     display: flex;
-     flex-direction: row;
-   }
-   
-   .ProfileOptionText{
-     color: white;
-     font-weight: 300;
-   }
-   
-   .ProfileImage{
-     width: fit-content;
-     height: 20px;
-     margin-left: 25px;
-   }
-   
-   .Profile{
-     display: flex;
-     align-content: center;
-   }
+.ProfileMenu{
+    display: flex;
+    flex-direction: row;
+}
 
-   #i1{
-    margin-bottom: -2%;
-   }
+.ProfileOptionText{
+    color: white;
+    font-weight: 300;
+}
+.ProfileImage{
+    width: fit-content;
+    height: 20px;
+    margin-left: 25px;
+}
+.Profile{
+    display: flex;
+    align-content: center;
+}
+#i1{
+margin-bottom: -2%;
+}

@@ -10,8 +10,7 @@
         <input id="ser" placeholder="Search...">
     </div>
     <div class="box7">
-    <div class="box3">
-        
+    <div class="box3">  
         <button mat-icon-button [matMenuTriggerFor]="person"><span class="material-symbols-outlined" id="per" >
             person
         </span>
@@ -26,12 +25,10 @@
         <h3>Cart</h3>
     </div>
 </div>
-
 </div>
 <mat-menu #person="matMenu">
     <div *ngIf="display; then box1 else box2"></div>
-    <ng-template #box1>
-        
+    <ng-template #box1>       
             <h3  class="wel" [ngStyle]="{'font-weight':'bold'}">Welcome,</h3>
             <span class="dis">To access account and manage orders</span>
             <button mat-raised-button class="l" (click)="login()">Login/Signup</button>
@@ -53,10 +50,8 @@
                     Wishlist
                 </span>
             </div>      
-
     </ng-template>
-    <ng-template #box2>
-       
+    <ng-template #box2>   
             <span class="GreetMessage">
               Hello {{ decodevalues.UserName }},
             </span>
@@ -80,7 +75,6 @@
                 My Wishlist
               </span>
             </button>
-            <button mat-stroked-button color="warn" id="logoutbtn" (click)="logout()">Log out</button>
-         
+            <button mat-stroked-button color="warn" id="logoutbtn" (click)="logout()">Log out</button> 
     </ng-template>
 </mat-menu>
