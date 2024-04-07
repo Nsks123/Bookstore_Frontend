@@ -35,14 +35,11 @@ export class ViewComponent implements OnInit{
         this.cartlist=response.data;
     })
   }
- 
-  
 }
 addTowish(booknumber:any){
   this.wish.addtowish(booknumber).subscribe((res:any)=>{
     console.log(res);
   })
-
 }
  bookid:any
  bookimg!:string
