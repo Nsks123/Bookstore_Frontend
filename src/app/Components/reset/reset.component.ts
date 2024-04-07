@@ -17,8 +17,6 @@ export class ResetComponent implements OnInit {
      
       email: ['',[Validators.required,Validators.email]],
   })
-
-  
 }
 ForgotSubmit(){let reqData={
   email:this.ResetForm.value.email,
@@ -28,5 +26,4 @@ this.userService.forgetPassword(reqData).subscribe((res:any)=>{
   console.log(res);
 })
 }
-
 }
