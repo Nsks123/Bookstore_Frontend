@@ -15,7 +15,9 @@
      </div>
       </mat-expansion-panel>
    </div>
+
    <div class="books">
+      
       <div class="book" *ngFor="let databook of data">
          <app-book [book]="databook" (click)="ns(databook.bookId)"></app-book>
       </div>
