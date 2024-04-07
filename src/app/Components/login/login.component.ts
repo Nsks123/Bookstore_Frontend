@@ -27,8 +27,7 @@ export class LoginComponent implements OnInit{
       fullname: ['',[Validators.required,Validators.pattern('^[A-Z][a-z]+ [A-Z][a-z]*')]],       
        email: ['',[Validators.required,Validators.email]],
        password: ['',[Validators.required,Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}')]],
-       mobile_number:['',[Validators.required,Validators.pattern('^[7-9][0-9]{9}$')]]
-       
+       mobile_number:['',[Validators.required,Validators.pattern('^[7-9][0-9]{9}$')]]  
    })
   }
   LoginSubmit(){
