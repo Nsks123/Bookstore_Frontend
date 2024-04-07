@@ -7,5 +7,7 @@ import { BookEntity } from '../displaybooks/data';
   styleUrl: './book.component.scss'
 })
 export class BookComponent {
+
 @Input() book!:any;
+
 }
