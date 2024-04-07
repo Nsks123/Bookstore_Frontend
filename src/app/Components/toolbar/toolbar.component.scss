@@ -1,0 +1,122 @@
+.box{
+    display: flex;
+    height:10vh;
+    width: 100vw;
+    background-color: maroon;
+}
+.box1{
+    display: flex;
+    align-items: center;
+    padding-left: 10vw;
+    margin-top: 1vh;
+    gap:1vh
+}
+.box1 h1{
+    color: rgba(255, 255, 255, 0.821);
+}
+img{
+    margin-bottom: 2vh;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.box2{
+    display: flex;
+    align-items: center;
+    padding-left: 10vh;
+    
+
+}
+#ser{
+    height: 5vh;
+    width: 40vw;
+    border: 0;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+
+}
+#sea{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 5.3vh;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    padding-left: 1.5vh;
+    color: rgba(0, 0, 0, 0.419);
+    cursor: pointer;
+}
+.box3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5vh;
+    color: white;
+    margin-bottom: 2vh;
+    cursor: pointer;
+}
+
+#per{
+    color: white;
+
+
+}
+#car{
+    color: white;
+
+}
+.box4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5vh;
+    color: white;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+.box7{
+    display: flex;
+    padding-left: 10vw;
+    gap: 5vh;
+}
+input:focus{
+    outline: none;
+}
+#ser{
+    border: 0;
+}
+.GreetMessage{
+    padding-right: 10px;
+   }
+   
+   .ProfileMenu{
+     display: flex;
+     flex-direction: row;
+   }
+   
+   .ProfileOptionText{
+     color: white;
+     font-weight: 300;
+   }
+   
+   .ProfileImage{
+     width: fit-content;
+     height: 20px;
+     margin-left: 25px;
+   }
+   
+   .Profile{
+     display: flex;
+     align-content: center;
+   }
+
+   #i1{
+    margin-bottom: -2%;
+   }

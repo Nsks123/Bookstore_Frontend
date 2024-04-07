@@ -1,0 +1,24 @@
+<div class="container">
+   <div class="one">
+      <h1>Books<span id="in">({{data.length}} items)</span></h1>
+      <mat-expansion-panel (opened)="panelOpenState = true " class="two" 
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+      <mat-panel-title >
+      Sort by Revelance
+      </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="three">
+      <button (click)="lowtohigh()" id="b1">Price Low to High</button>
+      <button (click)="hightolow()" id="b1">Price High to Low</button>
+      <button (click)="newarrival()" id="b1">Newest Arrival</button>
+     </div>
+      </mat-expansion-panel>
+   </div>
+   <div class="books">
+      <div class="book" *ngFor="let databook of data">
+         <app-book [book]="databook" (click)="ns(databook.bookId)"></app-book>
+      </div>
+   </div>
+</div>
+

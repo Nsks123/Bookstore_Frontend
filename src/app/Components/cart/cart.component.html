@@ -1,0 +1,150 @@
+<app-toolbar></app-toolbar>
+<div class="final2">
+<div class="one">
+    <p id="home">Home /</p><span id="in">My Cart</span>
+</div>
+
+    <!-- <div style="height:80vh;"> -->
+        <div class="mycart">
+            <div class="cart">
+                <h2 id="my">My Cart(1)</h2>
+                <div class="location">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <p id="uy">Use Your Current Location</p>
+                    <span class="material-symbols-outlined" id="em">
+                        expand_more
+                    </span>
+                </div>
+            </div>
+            <div class="books" *ngFor="let book of itemList; let i= index">
+                <img src="{{itemList[i].bookImage}}">
+                <div class="bd">
+                    <h2>{{itemList[i].bookName}}</h2>
+                    <h5>By {{itemList[i].author}}</h5>
+                    <div class="price">
+                        <div class="las">
+                            Rs. {{itemList[i].discountPrice}}
+                        </div>
+                        <div class="la">
+                            Rs. {{itemList[i].price}}
+                        </div>
+                    </div>
+                    <div class="sym">
+                        <button class="b1" (click)="decrease(book.bookId)">
+                            <span class="material-symbols-outlined">
+                                remove
+                            </span>
+                        </button>
+                        <div id="quantity">
+                          {{cartlist[i].cartQuantity}}
+                        </div>
+                        <button class="b2" (click)="increase(book.bookId)" >
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </button>
+                        <div>
+                            <button id="r1">
+                                Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order">
+                <button id="po" (click)="placed()">
+                    Place Order
+                </button>
+            </div>
+        </div>
+        <div class="address" *ngIf="!clickOn">
+            <div  id="a1">Address Details</div> 
+         </div>
+     
+         <div  class="customer" *ngIf="clickOn">
+             <div class="a2">
+                 Customer Details
+                 <div id="a3">
+                     Add New Address
+                 </div>
+             </div>
+             <form [formGroup]="addressForm" (ngSubmit)="AddressSubmit()">
+                 <div class="cdetails" >
+                     <div class="fname">
+                         <div class="addDet">
+                             <mat-label>FullName</mat-label>
+                             <mat-form-field appearance="outline">
+                                 <input matInput type="text" formControlName="name">
+                             </mat-form-field>
+                         </div>
+                         <div class="addDet">
+                             <mat-label>Mobile Number</mat-label>
+                             <mat-form-field appearance="outline">
+                                 <input matInput type="text" formControlName="phNo">
+                             </mat-form-field>
+                         </div>
+                     </div>
+                     <div class="addDet">
+                         <mat-label>Address</mat-label>
+                         <mat-form-field appearance="outline" style="width:57%;">
+                             <textarea matInput type="text" formControlName="address"></textarea>
+                         </mat-form-field>
+                     </div>
+                     <div class="fname1">
+                         <div class="addDet">
+                             <mat-label>city/town</mat-label>
+                             <mat-form-field appearance="outline">
+                                 <input matInput type="text" formControlName="city">
+                             </mat-form-field>
+                         </div>
+                         <div class="addDet">
+                             <mat-label>State</mat-label>
+                             <mat-form-field appearance="outline">
+                                 <input matInput  type="text" formControlName="state">
+                             </mat-form-field>
+                         </div>
+                     </div>
+                     <div style="display:flex; flex-direction: column; gap:2vh;">
+                         <mat-label>Type</mat-label>
+                         <mat-radio-group aria-label="Select an option" formControlName="addressType">
+                             <mat-radio-button value="1" id="mr1">Home</mat-radio-button>
+                             <mat-radio-button value="2" id="mr2">Work</mat-radio-button>
+                             <mat-radio-button value="3" id="mr3">Other</mat-radio-button>
+                         </mat-radio-group>
+                     </div>
+                     <button style="margin-left: auto;" mat-raised-button color="primary" type="submit" class="con">Continue</button>
+                 </div>
+             </form>
+         </div>
+     
+         <div class="address" *ngIf="!clickorder">
+             <div id="a1">Order Summay</div> 
+         </div>
+     
+         <div class="summary" *ngIf="clickorder">
+             <div id="a4">Order Summay</div> 
+             <div class="books" *ngFor="let book of itemList">
+                 <img src="{{book.bookImage}}" id="imagespace">
+                 <div class="bd">
+                     <h2>{{book.bookName}}</h2>
+                     <h5>By {{book.author}}</h5>
+                     <div class="price">
+                         <div class="las">
+                             Rs. {{book.discountPrice}}
+                         </div>
+                         <div class="la">
+                             Rs. {{book.price}}
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <button style="margin-left: auto;" mat-raised-button color="primary" id="final" (click)="order()">CHECKOUT</button>
+         </div>
+         <div class="space"> 
+             <div>    
+                 <mat-icon style="color: white;">star</mat-icon>
+             </div>
+            </div>
+        </div>

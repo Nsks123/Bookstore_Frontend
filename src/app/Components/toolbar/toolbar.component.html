@@ -1,0 +1,86 @@
+<div class="box">
+    <div class="box1">
+        <img src="assets\education.svg">
+        <h1>Bookstore</h1>
+    </div>
+    <div class="box2">
+        <span class="material-symbols-outlined" id="sea">
+        search
+        </span>
+        <input id="ser" placeholder="Search...">
+    </div>
+    <div class="box7">
+    <div class="box3">
+        
+        <button mat-icon-button [matMenuTriggerFor]="person"><span class="material-symbols-outlined" id="per" >
+            person
+        </span>
+        <h3 *ngIf="display">Profile</h3>
+        <h3 *ngIf="!display">{{ decodevalues.UserName }}</h3>
+    </button>
+    </div>
+    <div class="box4">
+    <span class="material-symbols-outlined" id="car" (click)="cart()">
+        shopping_cart
+        </span>
+        <h3>Cart</h3>
+    </div>
+</div>
+
+</div>
+<mat-menu #person="matMenu">
+    <div *ngIf="display; then box1 else box2"></div>
+    <ng-template #box1>
+        
+            <h3  class="wel" [ngStyle]="{'font-weight':'bold'}">Welcome,</h3>
+            <span class="dis">To access account and manage orders</span>
+            <button mat-raised-button class="l" (click)="login()">Login/Signup</button>
+            <div class="lines">
+                <div class="f1"></div>
+                <div class="f1"></div>
+            </div>
+            <div class="order">
+                <span class="material-symbols-outlined" id="con">
+                    orders
+                </span>
+                <span>My Orders</span>
+            </div>
+            <div class="order2">
+                <span class="material-symbols-outlined" id="con">
+                    favorite
+                </span>
+                <span id="wish" (click)="wishlist()">
+                    Wishlist
+                </span>
+            </div>      
+
+    </ng-template>
+    <ng-template #box2>
+       
+            <span class="GreetMessage">
+              Hello {{ decodevalues.UserName }},
+            </span>
+            <div class="Profile">
+              <button mat-menu-item>
+                <img src="assets\person_FILL0_wght400_GRAD0_opsz24.svg" id="i1">
+                <span>
+                  Profile
+                </span> 
+              </button>
+            </div>
+            <button mat-menu-item>
+              <img src="assets\shopping_cart_FILL0_wght400_GRAD0_opsz24.svg" alt="" id="i1">
+              <span>
+                My Orders
+              </span>
+            </button>
+            <button mat-menu-item >
+              <img src="assets\favorite_FILL0_wght400_GRAD0_opsz24.svg" alt="" id="i1">
+              <span (click)="wislist1()" >
+                My Wishlist
+              </span>
+            </button>
+            <button mat-stroked-button color="warn" id="logoutbtn" (click)="logout()">Log out</button>
+         
+    </ng-template>
+</mat-menu>

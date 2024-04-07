@@ -1,0 +1,267 @@
+#in{
+    font-size: medium;
+}
+#home{
+    font-size: medium;
+    opacity: 0.5;
+}
+.one{
+    display: flex;
+    align-items: flex-start;
+    min-height: 10vh;
+    padding-left: 18vh;
+    //justify-content: space-between;
+    margin-top: 4vh;
+}
+.mycart{
+    min-height: 50vh;
+    width: 55vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    //align-items: flex-start;
+    //min-height: 10vh;
+    //padding-left: 5vh;
+    //padding-top: 2vh;
+    //justify-content: space-between;
+    margin-left: 18vh;
+}
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    width: 50vw;
+    gap: 60vh;
+    margin-left: 4%;
+    //background-color: green;
+}
+
+#my{
+    //background-color: red;
+    padding: 0;
+    margin: 0;
+}
+.location{
+    display: flex;
+    height: 5vh;
+    width: 15vw;
+    border: 1px solid gainsboro;
+    align-items: center;
+    justify-content: center;
+}
+#uy{
+    margin-top: 5%;
+    font-weight: 500;
+}
+#em{
+    margin-left: 5%;
+}
+
+.books{
+    display: flex;
+    margin-top: 3%;
+}
+img{
+    height: 18vh;
+    margin-left: 5%;
+}
+.bd{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    width: 40vh;
+}
+.price{
+    display: flex;
+}
+
+.las{
+    font-size: large;
+    // height: 10vh;
+    // width: 5vw;
+    font-weight: 500;
+}
+
+.la{
+    color: gray;
+    text-decoration:line-through;
+    text-decoration-color: black;
+    font-size: small;
+    margin-left: 8%;
+}
+.sym{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+
+}
+.b1{
+    border-radius: 50%;
+    border: gainsboro;
+    cursor: pointer;
+}
+.b2{
+    border-radius: 50%;
+    border: gainsboro;
+    margin-left: 3%;
+    cursor: pointer;
+}
+#quantity{
+    height: 5vh;
+    width: 3vw;
+    border: 0.5px solid gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+}
+
+#r1{
+    height: 5vh;
+    width: 10vw;
+    align-items: end;
+    margin-left: 30%;
+    font-size: medium;
+    border: 0px;
+    cursor: pointer;
+}
+
+.order{
+    display: flex;
+    justify-content: end;
+    margin-top: 3%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+#po{
+    height: 6vh;
+    width: 13vw;
+    font-size: large;
+    background-color: rgb(87, 87, 242);
+    border: 0px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+
+.address{
+    min-height: 10vh;
+    width: 55vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18vh;
+    margin-top: 5vh;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: larger;
+}
+
+#a1{
+    margin-left: 5vh;
+    font-weight: 600;
+}
+
+.customer{
+    min-height: 10vh;
+    width: 55vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18vh;
+    margin-top: 5vh;
+}
+
+.a2{
+    height: 8vh;
+    margin-left: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+
+}
+
+#a3{
+    width: 10vw;
+    height: 5vh;
+    border: 2px solid red;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+    border-radius: 1vh;
+    font-size: small;
+}
+
+.cdetails{
+    margin-left: 8vh;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+.addDet{
+    display:flex;
+    flex-direction: column;
+}
+mat-form-field {
+    width: 38vh;
+}
+
+.fname{
+    display: flex;
+    gap: 5vh;
+}
+.fname1{
+    display: flex;
+    gap: 5vh;
+    //margin-top: -3vh;
+}
+#mr2{
+    margin-left: 10vh;
+}
+#mr3{
+    margin-left: 10vh;
+}
+
+.con{
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+.summary{
+    min-height: 10vh;
+    width: 55vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18vh;
+    margin-top: 5vh;
+}
+
+#a4{
+    height: 8vh;
+    margin-left: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+
+}
+
+.space{
+    margin-top: 10vh;
+}
+
+#final{
+    margin-right:5%;
+    margin-bottom: 5%;
+    
+}
+.final2{
+    height: 90vh;
+    overflow-y: scroll;
+}

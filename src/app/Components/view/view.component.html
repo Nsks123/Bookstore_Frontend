@@ -1,0 +1,120 @@
+<app-toolbar></app-toolbar>
+<div class="box6">
+<div class="box">
+    <div class="box1">
+        <div class="both">
+        <p (click)="display()" id="ho">Home / </p><span id="in">Book {{bookid}}</span>
+    </div>
+    </div>
+    <div class="box2">
+        <img [src]="data.bookImage">
+    </div>
+    <div class="box4">
+
+        <div class="add">
+            <div class="too" *ngIf="value"><button id="to" (click)="addToCart()">ADD TO BAG</button></div>
+            <div class="icons" *ngIf="!value">
+                <button id="b11">
+                    <span class="material-symbols-outlined">
+                        remove
+                    </span>
+                </button>
+                <div id="quantity">
+                    1
+                </div>
+                <button id="b22">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </button>
+            </div>
+            
+            <button id="wish" ><span class="material-symbols-outlined" id="span" (click)="addTowish(data.bookId)">
+                favorite
+                </span>  WISHLIST</button>
+        </div>
+    </div>
+</div>
+<div class="box5">
+    <div class="inn">
+        <h1 id="make">{{data.bookName}}</h1>
+        <h4 id="by">{{data.author}}</h4>
+        <div class="number">
+            <div class="rating"> 
+               {{data.rating}}
+                <span class="material-symbols-outlined md-light" id="st">
+                    star
+                </span>
+            </div>
+            <div class="num">
+                (20)
+            </div>
+        </div>
+        <div class="last">
+            <div class="las">
+                Rs. {{data.discountPrice}}
+            </div>
+            <div class="la">
+                Rs. {{data.price}}
+            </div>
+        </div>
+        <hr id="h">
+        <br>
+        <br>
+        <div class="dot">
+            <h2>Book Detail</h2>
+            <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero magni reprehenderit itaque quia suscipit iste, fugiat optio blanditiis necessitatibus aliquid fugit dignissimos quis sapiente labore totam quibusdam nam rerum asperiores ipsa, earum, libero veniam voluptatum odio ratione. Veritatis repudiandae odit perferendis officia ducimus obcaecati sint deserunt eum, commodi, maxime sed!</h4>
+            <br>
+            <hr id="h">
+            <h1>Customer Feedback</h1>
+            <div class="grey">
+                <div class="over">
+                    <h3>Overall rating</h3>
+                    <div class="star">
+                        <span class="material-symbols-outlined md-light1" id="st">
+                            star
+                        </span>
+                        <span class="material-symbols-outlined md-light1" id="st">
+                            star
+                        </span>
+                        <span class="material-symbols-outlined md-light1" id="st">
+                            star
+                        </span>
+                        <span class="material-symbols-outlined md-light1" id="st">
+                            star
+                        </span>
+                        <span class="material-symbols-outlined md-light1" id="st">
+                            star
+                        </span>
+                </div>
+                <div class="place">
+                <input placeholder="Write your review" id="write">
+                <button>Submit</button>
+                </div>
+                </div>
+            </div>
+            <div class="ac">
+                <div class="pro">AC</div>
+                <h3>Aniket chile</h3>
+            </div>
+            <div class="com">
+                <mat-icon style="color: yellow;">star</mat-icon>
+                <mat-icon style="color: yellow;">star</mat-icon>
+                <mat-icon style="color: yellow;">star</mat-icon>
+                <span class="material-symbols-outlined md-light1" id="sto">
+                    star
+                </span>
+                <span class="material-symbols-outlined md-light1" id="sto">
+                    star
+                </span>
+
+            </div>
+            <div class="has">
+                <h4>Good product. Even though the translation could have been better, Chanakya's neeti are though provoking. Chanakya has written on many different topics and his writings are succint.</h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+

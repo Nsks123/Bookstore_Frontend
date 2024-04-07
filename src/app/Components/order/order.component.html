@@ -1,0 +1,42 @@
+<app-toolbar></app-toolbar>
+<div style="display:flex; flex-direction: column; justify-content: center; align-items: center; padding:5vh; gap:5vh;">
+    <div>
+        <img id="image" src="assets\Screenshot 2024-04-03 230857.png">
+        <p style="text-align: center; font: normal normal normal 18px/22px Lato;
+        letter-spacing: 0px;">hurray!!! your order is confirmed<br>
+              the order id is #123456 save the order id for <br>
+              further communication..
+        </p>
+    </div>
+  
+    <table mat-table [dataSource]="dataSource" >
+  
+        <ng-container matColumnDef="email" >
+          <th mat-header-cell *matHeaderCellDef> Email Us </th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="contact">
+          <th mat-header-cell *matHeaderCellDef> Contact Us </th>
+          <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="address">
+          <th mat-header-cell *matHeaderCellDef> Address </th>
+          <td mat-cell *matCellDef="let element" style="border-right: none;"> {{element.address}} </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+  
+    <div>
+        <button mat-raised-button [ngStyle]="{'background-color':'#3371B5', 'color':'white'}" (click)="goToDashboard()">Continue Shopping</button>
+    </div>
+  
+  </div>
+  
+  <footer>
+    Copyright <mat-icon id="copy">copyright</mat-icon> 2020, BookStore Private Limited. All Rights Reserved
+  </footer>

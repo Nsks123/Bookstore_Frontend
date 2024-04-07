@@ -1,0 +1,30 @@
+<app-toolbar></app-toolbar>
+<div class="box">
+    <p id="ho">Home / </p><span id="in">My Whislist</span>
+</div>
+<div class="box1">
+
+        <h1>My Wishlist (01)</h1>
+        <div class="box2" *ngFor="let singlebook of wishlistitems;let i= index">
+            <img [src]="singlebook.bookImage" alt="">
+            <div class="inner">
+                <div class="me">
+                <h1 id="make">{{singlebook.bookName}}</h1>
+                <span class="material-symbols-outlined" (click)="delete(whislist[i].wishListId)">
+                    delete
+                    </span>
+                </div>
+                <h3 id="by">{{singlebook.author}}</h3>
+                <div class="last">
+                    <div class="las">
+                        Rs. {{singlebook.discountPrice}}
+                    </div>
+                    <div class="la">
+                        Rs. {{singlebook.price}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+   
+</div>

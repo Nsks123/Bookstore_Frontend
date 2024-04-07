@@ -1,0 +1,118 @@
+<div class="box">
+    <div class="box3">
+        <div class="box1">
+            <img src="assets\2766594@2x.png">
+            <h1>ONLINE BOOK SHOPPING</h1>
+        </div>
+        <div class="box2">
+            <div class="group">
+                <mat-tab-group class="inside"> 
+                    <mat-tab label="LOGIN" id="log">  
+                        <form [formGroup]="loginForm">
+                        <div class="inner">
+                          <mat-form-field appearance="outline" class="id">
+                            <mat-label>Email Id</mat-label>
+                            <input matInput formControlName="email">   
+                            <mat-error *ngIf="loginForm.hasError('required','email')">
+                              email is Required!
+                          </mat-error>
+                          <mat-error *ngIf="loginForm.hasError('email','email')">
+                              email is not valid!  
+                          </mat-error> 
+                          </mat-form-field> 
+                          <mat-form-field appearance="outline" class="id">
+                            <mat-label>Password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">   
+                            <mat-error *ngIf="loginForm.hasError('required','password')">
+                              password is Required!
+                          </mat-error>
+                          <mat-error *ngIf="loginForm.hasError('pattern','password')">
+                              password is not valid! 
+                          </mat-error> 
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                          </mat-form-field>
+                          <div class="out">
+                             <button mat-button color="primary">Forgot Password?</button>
+                          </div>
+                         <div class="lol">
+                            <button mat-raised-button (click) = "LoginSubmit()">Login</button>
+                         </div>
+                         <div class="or">
+                            <div class="first"></div>
+                            <div>OR</div>
+                            <div class="second"></div>
+                         </div>
+                            <div class="las">
+                                <button mat-raised-button color="primary">Facebook</button>
+                                <button mat-raised-button id="goo">Google</button>
+                            </div>
+                       </div>
+                    </form>
+                   </mat-tab>
+                    <mat-tab label="SIGNUP">
+                        <div class="all">
+                            <form [formGroup]="registerForm">
+                        <div class="sin">
+                            <mat-form-field appearance="outline" class="ido">
+                                <mat-label>Full Name</mat-label>
+                                <input matInput formControlName="fullname">   
+                                <mat-error *ngIf="registerForm.hasError('required','fullname')">
+                                  fullname is Required!
+                              </mat-error>
+                              <mat-error *ngIf="registerForm.hasError('pattern','fullname')">
+                                  fullname is not valid! 
+                              </mat-error> 
+                              </mat-form-field> 
+                            <div class="ma">
+                                <mat-form-field appearance="outline" class="ido">
+                                    <mat-label>Email Id</mat-label>
+                                    <input matInput formControlName="email">   
+                                    <mat-error *ngIf="registerForm.hasError('required','email')">
+                                      email is Required!
+                                  </mat-error>
+                                  <mat-error *ngIf="registerForm.hasError('email','email')">
+                                      email is not valid!  
+                                  </mat-error> 
+                                  </mat-form-field> 
+                            </div>
+                            <div class="mam">
+                                <mat-form-field appearance="outline" class="ido">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">   
+                                    <mat-error *ngIf="registerForm.hasError('required','password')">
+                                      password is Required!
+                                  </mat-error>
+                                  <mat-error *ngIf="registerForm.hasError('pattern','password')">
+                                      password is not valid! 
+                                  </mat-error> 
+                                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </button>
+                                  </mat-form-field>
+                            </div>
+                            <div class="mamm">
+                                <mat-form-field appearance="outline" class="ido">
+                                    <mat-label>Phone Number</mat-label>
+                                    <input matInput formControlName="mobile_number">   
+                                    <mat-error *ngIf="registerForm.hasError('required','mobile_number')">
+                                      Mobile Number is Required!
+                                  </mat-error>
+                                  <mat-error *ngIf="registerForm.hasError('pattern','mobile_number')">
+                                    Mobile Number is not valid!  
+                                  </mat-error> 
+                                  </mat-form-field> 
+                            </div>
+                         <div class="loll">
+                            <button mat-raised-button (click) = "RegisterSubmit()">SignUp</button>
+                        </div>
+                    </div>
+                </form>
+                     </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

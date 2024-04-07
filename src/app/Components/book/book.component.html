@@ -1,0 +1,28 @@
+<div class="box" >
+    <img [src]="book.bookImage">
+</div>
+<div class="box1">
+    <div class="inner">
+        <h3 id="make">{{book.bookName}}</h3>
+        <h4 id="by"> {{book.author}}</h4>
+        <div class="number">
+        <div class="rating"> 
+           {{book.rating}} 
+            <span class="material-symbols-outlined md-light" id="st">
+                star
+            </span>
+        </div>
+        <div class="num">
+            (20)
+        </div>
+    </div>
+    <div class="last">
+    <div class="las">
+        Rs. {{book.discountPrice}}
+    </div>
+    <div class="la">
+        Rs. {{book.price}}
+    </div>
+   </div>
+</div>
+
