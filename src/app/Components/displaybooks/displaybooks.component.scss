@@ -41,7 +41,6 @@ app-sort{
     z-index: 1;
 }
 .book:hover{
-
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .bottom-expanded .mat-expansion-panel-content {
@@ -55,6 +54,7 @@ app-sort{
     font-size: medium;
     cursor: pointer;
 }
+
 .three{
     display: flex;
     flex-direction: column;
